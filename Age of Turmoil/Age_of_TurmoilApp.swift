@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Age_of_TurmoilApp: App {
+    @StateObject private var data = DataController()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(data)
         }
     }
 }
